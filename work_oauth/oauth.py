@@ -7,7 +7,7 @@ from rest_framework import HTTP_HEADER_ENCODING
 from django.core.cache import cache
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
-from .models import WorkUserToken
+
 
 EXPIRE_MINUTES = getattr(settings, 'REST_FRAMEWORK_TOKEN_EXPIRE_MINUTES', 1)
 
@@ -19,4 +19,3 @@ class Auth(BaseAuthentication):
 
 
 
-        
