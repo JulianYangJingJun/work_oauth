@@ -19,7 +19,7 @@ EXPIRE_MINUTES = getattr(settings, 'REST_FRAMEWORK_TOKEN_EXPIRE_MINUTES', 1)
 class Permission(BasePermission):
 
     def has_permission(self, request, view):
-        if request.session.get('userid') is not None:
+        if request.session.get('userinfo') is not None:
             res = True
         else:
             res = False
@@ -29,4 +29,4 @@ class Permission(BasePermission):
 class Auth(BaseAuthentication):
 
     def authenticate(self, request):
-        return request.session.get('userid'), None
+        return request.session.get('userinfo'), None
