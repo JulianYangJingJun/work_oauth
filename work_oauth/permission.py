@@ -10,3 +10,4 @@ class Permission(BasePermission):
         else:
             res = False
         return res
+        
