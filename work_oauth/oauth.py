@@ -16,6 +16,3 @@ class Auth(BaseAuthentication):
 
     def authenticate(self, request):
         return request.session.get('userinfo'), None
-
-
-
